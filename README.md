@@ -1,6 +1,4 @@
-# Data dictionary and usage notes
 
-All datasets in this folder are synthetic portfolio examples. They do not represent actual employer, client, candidate, or customer records.
 
 ## `project_sprint_metrics.csv`
 - `sprint`: Sprint label.
