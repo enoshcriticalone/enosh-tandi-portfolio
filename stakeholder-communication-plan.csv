@@ -1,0 +1,6 @@
+stakeholder,information_needed,channel,cadence,owner,escalation_trigger
+Project Manager,Overall progress risks decisions schedule variance,Weekly status report,Weekly,Project Coordinator,Milestone forecast slips or high-impact risk
+Product Owner,Backlog priorities acceptance criteria decisions,Backlog review and decision log,At least weekly and as needed,Project Coordinator,Acceptance decision blocks sprint or testing
+Technical Lead,Dependencies technical blockers integration status,Delivery sync and RAID log,2-3 times per week,Project Coordinator,External dependency threatens critical path
+QA Lead,Test readiness defects environment availability,QA sync and defect tracker,2-3 times per week during testing,Project Coordinator,Critical defect or test environment unavailable
+Client Representative,Requirements timeline feedback and approvals,Client check-in and email summary,Weekly,Project Manager,Approval or client action overdue

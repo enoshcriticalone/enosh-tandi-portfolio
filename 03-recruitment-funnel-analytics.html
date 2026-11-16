@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recruitment Funnel &amp; Hiring Operations Analytics | Enosh Tandi</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">ET<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Case studies</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="top-cta" href="https://www.linkedin.com/in/enosh-tandi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+  </header>
+  <main class="case-page">
+    <p class="eyebrow">ENOSH TANDI · PORTFOLIO CASE STUDY</p>
+    <a class="back-link" href="../index.html#work">← Back to portfolio</a>
+    <article class="case-document">
+      <h1>Case Study 03 — Recruitment Funnel &amp; Hiring Operations Analytics</h1>
+<p><strong>Category:</strong> Business Analytics · Recruitment Operations · Process Improvement<br />
+<strong>Scenario:</strong> A technical recruitment team wants to identify candidate drop-off between sourcing, screening, client submission, interviews, offers, and placements.<br />
+<strong>Data:</strong> Synthetic funnel counts. No candidate-level or ATS data is included.</p>
+<h2>1. Business problem</h2>
+<p>Recruitment teams often track activity at each stage, but a list of candidate statuses may not show where the process is losing momentum. Funnel reporting helps distinguish sourcing volume from qualified pipeline and completed placements.</p>
+<p>The objective is to map the candidate journey, quantify stage-to-stage conversion, and suggest process improvements.</p>
+<h2>2. Funnel dataset</h2>
+<p>The file <a href="../data/recruitment_funnel_sample.csv"><code>recruitment_funnel_sample.csv</code></a> contains illustrative counts:</p>
+<table>
+<thead>
+<tr>
+  <th>Stage</th>
+  <th style="text-align:right">Candidates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sourced</td>
+  <td style="text-align:right">500</td>
+</tr>
+<tr>
+  <td>Screened</td>
+  <td style="text-align:right">320</td>
+</tr>
+<tr>
+  <td>Qualified</td>
+  <td style="text-align:right">210</td>
+</tr>
+<tr>
+  <td>Submitted to client</td>
+  <td style="text-align:right">150</td>
+</tr>
+<tr>
+  <td>Interviewed</td>
+  <td style="text-align:right">100</td>
+</tr>
+<tr>
+  <td>Offer</td>
+  <td style="text-align:right">80</td>
+</tr>
+<tr>
+  <td>Placed</td>
+  <td style="text-align:right">65</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../assets/charts/recruitment_funnel.png" alt="Recruitment funnel" /></p>
+<h2>3. Key metrics</h2>
+<ul>
+<li><strong>64.0%</strong> of sourced candidates reached screening.</li>
+<li><strong>65.6%</strong> of screened candidates were classified as qualified.</li>
+<li><strong>66.7%</strong> of submitted candidates reached interview.</li>
+<li><strong>81.3%</strong> of offers converted to placements.</li>
+<li><strong>13.0%</strong> of sourced candidates reached placement.</li>
+<li><strong>20.3%</strong> of screened candidates reached placement.</li>
+</ul>
+<p>These percentages are calculations from the synthetic sample, not actual personal or employer results.</p>
+<h2>4. Interpretation</h2>
+<p>The largest absolute reduction occurs between sourcing and screening: 180 of the 500 sourced candidates do not appear in the screened count. The next largest reduction is between screening and qualification: 110 candidates.</p>
+<p>This does not automatically mean the sourcing channel or recruiter is underperforming. It may reflect duplicate profiles, candidate availability, compensation mismatch, location or work-authorisation constraints, incomplete profiles, timing, or a mismatch between the job description and screening criteria. Those reasons need to be captured in the ATS before corrective action is selected.</p>
+<h2>5. Recommendations</h2>
+<table>
+<thead>
+<tr>
+  <th>Priority</th>
+  <th>Recommendation</th>
+  <th>Suggested measure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>High</td>
+  <td>Standardise role intake and must-have criteria with the hiring manager</td>
+  <td>Requisition completeness; screening rejection reasons</td>
+</tr>
+<tr>
+  <td>High</td>
+  <td>Use role-specific screening rubrics</td>
+  <td>Qualified-to-submitted conversion by role</td>
+</tr>
+<tr>
+  <td>High</td>
+  <td>Capture a structured reason for every candidate rejection or withdrawal</td>
+  <td>Drop-off reason distribution</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Set interview scheduling and feedback SLAs</td>
+  <td>Time from submission to interview; feedback turnaround</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Keep ATS stages and candidate records updated</td>
+  <td>Records with complete status and next action</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Review conversion by role family and sourcing channel</td>
+  <td>Stage conversion by role and source</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Example operational controls</h2>
+<ul>
+<li>Confirm job requirements, priority skills, compensation range, and interview stages during intake.</li>
+<li>Keep one agreed definition for each ATS stage.</li>
+<li>Track candidate owner, client owner, next action, and next-action date.</li>
+<li>Record interview feedback and rejection reasons promptly.</li>
+<li>Review ageing candidates and open requisitions in a weekly operations meeting.</li>
+<li>Use a consistent evaluation rubric while allowing role-specific criteria.</li>
+</ul>
+<h2>7. Technical files</h2>
+<ul>
+<li><a href="../data/recruitment_funnel_sample.csv">Synthetic recruitment funnel data</a></li>
+<li><a href="../sql/recruitment_funnel_analysis.sql">SQL funnel query</a></li>
+<li><a href="../analysis/run_analysis.py">Python analysis script</a></li>
+<li><a href="../outputs/recruitment_funnel_analysis.csv">Generated funnel summary</a></li>
+</ul>
+<h2>8. Limitations and next iteration</h2>
+<p>This is an aggregate funnel, not candidate-level cohort data. It does not include role, source, recruiter, date entered, date exited, withdrawal reason, interview round, or time-to-fill. A production analysis should use cohort-based conversion so that candidates have enough time to progress through all stages. It should also avoid comparing recruiters or channels without controlling for role difficulty and hiring-manager responsiveness.</p>
+<h2>9. Relevant experience</h2>
+<p>My resume states that I screened <strong>300+ candidates</strong> and contributed to <strong>72 technical placements</strong>, created screening and evaluation rubrics for <strong>15+ engineering roles</strong>, coordinated interview workflows and candidate follow-ups, maintained ATS records, and supported an ATS migration initiative. Those figures are separate resume facts. They are not the synthetic dataset or the result of this case-study analysis.</p>
+
+    </article>
+    <p class="case-end"><a href="../index.html#work">← Explore other case studies</a></p>
+  </main>
+  <footer><span>© 2026 Enosh Tandi</span><span>Project Management · Business Analytics · Operations</span></footer>
+</body>
+</html>

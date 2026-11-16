@@ -1,0 +1,43 @@
+opportunity_id,segment,lead_source,stage,deal_value_inr,stage_probability_pct,created_date,last_activity_date
+OPP-001,FinTech,Outbound Email,Prospect,900000,10,2025-11-10,2026-01-09
+OPP-002,SaaS,Website,Prospect,300000,10,2025-01-05,2025-02-06
+OPP-003,Software,Referral,Prospect,380000,10,2025-03-06,2025-04-17
+OPP-004,Cloud Services,Referral,Prospect,740000,10,2025-07-26,2025-10-09
+OPP-005,Software,LinkedIn,Prospect,250000,10,2025-10-31,2025-12-10
+OPP-006,FinTech,Outbound Email,Prospect,180000,10,2025-09-05,2025-11-14
+OPP-007,SaaS,Website,Qualified,710000,25,2025-04-13,2025-06-25
+OPP-008,FinTech,Website,Qualified,290000,25,2025-11-12,2026-01-21
+OPP-009,Cloud Services,Referral,Qualified,390000,25,2025-06-01,2025-07-12
+OPP-010,Software,LinkedIn,Qualified,430000,25,2025-08-20,2025-08-21
+OPP-011,Cloud Services,Outbound Email,Qualified,470000,25,2025-08-19,2025-09-09
+OPP-012,SaaS,Outbound Email,Qualified,260000,25,2025-06-28,2025-08-26
+OPP-013,FinTech,Website,Qualified,220000,25,2025-03-07,2025-05-12
+OPP-014,SaaS,Referral,Discovery,820000,40,2025-07-23,2025-08-26
+OPP-015,Software,LinkedIn,Discovery,670000,40,2025-05-15,2025-06-12
+OPP-016,Cloud Services,LinkedIn,Discovery,790000,40,2025-02-09,2025-04-08
+OPP-017,Software,Outbound Email,Discovery,450000,40,2025-06-07,2025-08-16
+OPP-018,FinTech,Website,Discovery,890000,40,2025-09-29,2025-10-30
+OPP-019,SaaS,Referral,Discovery,890000,40,2025-08-08,2025-10-18
+OPP-020,FinTech,Referral,Discovery,630000,40,2025-03-28,2025-06-12
+OPP-021,Cloud Services,LinkedIn,Proposal,850000,60,2025-06-17,2025-08-07
+OPP-022,Software,Outbound Email,Proposal,200000,60,2025-09-25,2025-10-17
+OPP-023,Cloud Services,Website,Proposal,520000,60,2025-02-20,2025-04-11
+OPP-024,SaaS,Website,Proposal,320000,60,2025-06-25,2025-07-09
+OPP-025,FinTech,Referral,Proposal,440000,60,2025-05-28,2025-07-06
+OPP-026,SaaS,LinkedIn,Proposal,920000,60,2025-07-25,2025-08-13
+OPP-027,Software,Outbound Email,Negotiation,720000,80,2025-05-20,2025-07-12
+OPP-028,Cloud Services,Outbound Email,Negotiation,380000,80,2025-01-21,2025-02-07
+OPP-029,Software,Website,Negotiation,860000,80,2025-01-04,2025-03-20
+OPP-030,FinTech,Referral,Negotiation,550000,80,2025-01-18,2025-03-06
+OPP-031,SaaS,LinkedIn,Negotiation,480000,80,2025-01-14,2025-03-09
+OPP-032,FinTech,LinkedIn,Closed Won,390000,100,2025-03-26,2025-05-03
+OPP-033,Cloud Services,Outbound Email,Closed Won,370000,100,2025-07-20,2025-09-01
+OPP-034,Software,Website,Closed Won,690000,100,2025-09-01,2025-09-21
+OPP-035,Cloud Services,Referral,Closed Won,430000,100,2025-06-10,2025-06-16
+OPP-036,SaaS,Referral,Closed Won,260000,100,2025-10-23,2026-01-04
+OPP-037,FinTech,LinkedIn,Closed Lost,930000,0,2025-08-27,2025-09-15
+OPP-038,SaaS,Outbound Email,Closed Lost,190000,0,2025-09-01,2025-10-07
+OPP-039,Software,Website,Closed Lost,460000,0,2025-03-24,2025-04-23
+OPP-040,Cloud Services,Website,Closed Lost,790000,0,2025-08-25,2025-09-12
+OPP-041,Software,Referral,Closed Lost,840000,0,2025-11-01,2025-11-23
+OPP-042,FinTech,LinkedIn,Closed Lost,780000,0,2025-07-29,2025-08-12

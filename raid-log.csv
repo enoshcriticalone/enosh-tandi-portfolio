@@ -1,0 +1,6 @@
+id,type,description,probability,impact,owner,status,response_or_action,due_date
+R-01,Risk,Acceptance criteria may be unclear for a high-priority feature,Medium,High,Product Owner,Open,Review acceptance criteria before sprint commitment,2026-11-20
+R-02,Risk,QA capacity may be constrained near release,Medium,High,QA Lead,Open,Confirm test capacity and identify backup coverage,2026-11-21
+A-01,Assumption,Product Owner feedback is available within one business day,Medium,Medium,Project Manager,To Validate,Confirm expected review turnaround,2026-11-18
+I-01,Issue,External API test credentials are not yet available,High,High,Technical Lead,Open,Escalate access request and track vendor response,2026-11-17
+D-01,Dependency,Release approval depends on security review,Medium,High,Security Lead,Tracking,Book review and confirm required evidence,2026-11-24

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Pipeline &amp; Revenue Operations Analytics | Enosh Tandi</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">ET<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Case studies</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="top-cta" href="https://www.linkedin.com/in/enosh-tandi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+  </header>
+  <main class="case-page">
+    <p class="eyebrow">ENOSH TANDI · PORTFOLIO CASE STUDY</p>
+    <a class="back-link" href="../index.html#work">← Back to portfolio</a>
+    <article class="case-document">
+      <h1>Case Study 02 — Sales Pipeline &amp; Revenue Operations Analytics</h1>
+<p><strong>Category:</strong> Business Analytics · Sales Operations · Client Development<br />
+<strong>Scenario:</strong> A technology services team needs a simple view of opportunity distribution, deal value, weighted pipeline, and lead-source activity.<br />
+<strong>Data:</strong> Synthetic, 42-opportunity sample. Not actual NIOS IT Solutions data.</p>
+<h2>1. Business problem</h2>
+<p>A pipeline can contain many opportunities without giving leadership a clear view of forecast quality. A stage label alone does not show whether next steps are current, whether opportunity values are realistic, or where leads may be stalling.</p>
+<p>The objective is to create a basic pipeline snapshot that supports weekly reviews and more disciplined follow-up.</p>
+<h2>2. Questions to answer</h2>
+<ol>
+<li>How many opportunities sit in each pipeline stage?</li>
+<li>What is the total open pipeline value?</li>
+<li>What is the probability-weighted open pipeline?</li>
+<li>How do opportunity counts and wins vary by lead source?</li>
+<li>What process changes would improve visibility and follow-through?</li>
+</ol>
+<h2>3. Method</h2>
+<p>The sample dataset <a href="../data/sales_pipeline_sample.csv"><code>sales_pipeline_sample.csv</code></a> contains 42 opportunities, with an illustrative deal value, segment, source, stage, and stage probability.</p>
+<p>Weighted value is calculated as:</p>
+<p><code>Deal value × stage probability</code></p>
+<p>The sample probabilities are fixed assumptions for demonstration: Prospect 10%, Qualified 25%, Discovery 40%, Proposal 60%, Negotiation 80%, Closed Won 100%, and Closed Lost 0%.</p>
+<h2>4. Results from the sample</h2>
+<ul>
+<li><strong>42</strong> total opportunities.</li>
+<li><strong>5</strong> marked Closed Won and <strong>6</strong> marked Closed Lost.</li>
+<li><strong>₹16.90 million</strong> total value across open opportunities.</li>
+<li><strong>₹7.37 million</strong> probability-weighted open pipeline.</li>
+<li><strong>₹2.14 million</strong> value marked Closed Won in this sample.</li>
+</ul>
+<p><img src="../assets/charts/sales_pipeline_stages.png" alt="Opportunity distribution by stage" /></p>
+<h3>Lead-source snapshot</h3>
+<p>The sample contains 11 Referral opportunities, 11 Website opportunities, 10 LinkedIn opportunities, and 10 Outbound Email opportunities. Referral and Website each have two and one closed wins respectively, while LinkedIn and Outbound Email each have one win. With such a small, synthetic sample, these differences should not be used to rank real channels.</p>
+<h2>5. Interpretation</h2>
+<p>Weighted pipeline is more useful than simply adding every deal value, but it is still a forecast assumption rather than guaranteed revenue. A stage probability should be validated against the organisation's historical win rates and adjusted for segment or deal type where enough data exists.</p>
+<p>The most important operational gap in this dataset is not a demonstrated performance issue; it is the absence of fields such as next action, next action date, stage-entry date, close date, loss reason, and opportunity owner. Without these, pipeline reviews can become subjective.</p>
+<h2>6. Recommendations</h2>
+<table>
+<thead>
+<tr>
+  <th>Priority</th>
+  <th>Recommendation</th>
+  <th>Why it helps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>High</td>
+  <td>Make opportunity owner, next step, and next-step date mandatory</td>
+  <td>Creates clear accountability and reduces forgotten follow-ups</td>
+</tr>
+<tr>
+  <td>High</td>
+  <td>Add stage-entry date and calculate days in stage</td>
+  <td>Exposes opportunities that may be stalled</td>
+</tr>
+<tr>
+  <td>High</td>
+  <td>Record structured closed-lost reasons</td>
+  <td>Helps distinguish pricing, timing, fit, competition, and no-response losses</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Compare stage conversion by segment and source over a larger time period</td>
+  <td>Supports better targeting without overreacting to small samples</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Review probability assumptions quarterly against historical conversion</td>
+  <td>Improves forecast reliability</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Separate new pipeline, existing pipeline, won revenue, and weighted forecast</td>
+  <td>Prevents different measures from being mixed in reports</td>
+</tr>
+</tbody>
+</table>
+<h2>7. Example weekly pipeline review</h2>
+<ul>
+<li>Review opportunities with no activity or no next step.</li>
+<li>Confirm stage evidence before moving an opportunity forward.</li>
+<li>Review proposal and negotiation deals with close dates in the current period.</li>
+<li>Capture client questions, technical dependencies, and internal owners.</li>
+<li>Assign action items with due dates and revisit them at the next review.</li>
+</ul>
+<h2>8. Technical files</h2>
+<ul>
+<li><a href="../data/sales_pipeline_sample.csv">Sample pipeline data</a></li>
+<li><a href="../sql/sales_pipeline_analysis.sql">SQL queries</a></li>
+<li><a href="../analysis/run_analysis.py">Python analysis script</a></li>
+<li><a href="../outputs/sales_stage_summary.csv">Generated stage summary</a></li>
+<li><a href="../outputs/sales_source_summary.csv">Generated source summary</a></li>
+</ul>
+<h2>9. Limitations and next iteration</h2>
+<p>The sample does not include actual customer identities, historical stage transitions, sales cycle duration, deal owner, close dates, or loss reasons. The stage probabilities are illustrative, not statistically estimated. A live version should use CRM history and clearly distinguish bookings, revenue recognition, pipeline, and forecast.</p>
+<h2>10. Relevant experience</h2>
+<p>My resume describes managing and monitoring a sales pipeline, tracking opportunities and follow-ups, reporting on conversion progress and revenue performance, coordinating client requirements with technical teams, redesigning elements of an API product sales funnel, and delivering product demonstrations. This case study translates those business-development workflows into a structured analytics exercise.</p>
+
+    </article>
+    <p class="case-end"><a href="../index.html#work">← Explore other case studies</a></p>
+  </main>
+  <footer><span>© 2026 Enosh Tandi</span><span>Project Management · Business Analytics · Operations</span></footer>
+</body>
+</html>

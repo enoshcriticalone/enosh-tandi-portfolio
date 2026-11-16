@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agile Project Delivery &amp; Sprint Health | Enosh Tandi</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">ET<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Case studies</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="top-cta" href="https://www.linkedin.com/in/enosh-tandi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+  </header>
+  <main class="case-page">
+    <p class="eyebrow">ENOSH TANDI · PORTFOLIO CASE STUDY</p>
+    <a class="back-link" href="../index.html#work">← Back to portfolio</a>
+    <article class="case-document">
+      <h1>Case Study 01 — Agile Project Delivery &amp; Sprint Health</h1>
+<p><strong>Category:</strong> IT Project Management · Agile Delivery · PMO Support<br />
+<strong>Scenario:</strong> A cross-functional product team wants better visibility into sprint commitments, delivery consistency, blockers, and carryover.<br />
+<strong>Data:</strong> Synthetic, eight-sprint sample. No employer or client data is used.</p>
+<h2>1. Business problem</h2>
+<p>A project manager can see individual tickets in a task board, but still struggle to answer basic delivery questions:</p>
+<ul>
+<li>Are sprint commitments realistic?</li>
+<li>Is the team consistently completing planned work?</li>
+<li>Which sprints experienced the greatest blocker load or carryover?</li>
+<li>What should be discussed in the next stand-up, review, or retrospective?</li>
+</ul>
+<p>The objective is to turn sprint-level tracking into a repeatable delivery review.</p>
+<h2>2. Objective</h2>
+<p>Build a lightweight sprint health view that combines planned story points, completed story points, blockers raised, and carryover items. Use the analysis to identify where a project coordinator should investigate and what should be escalated.</p>
+<h2>3. Dataset and measures</h2>
+<p>The file <a href="../data/project_sprint_metrics.csv"><code>project_sprint_metrics.csv</code></a> contains eight illustrative sprint records.</p>
+<table>
+<thead>
+<tr>
+  <th>Measure</th>
+  <th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sprint completion rate</td>
+  <td>Completed story points ÷ planned story points</td>
+</tr>
+<tr>
+  <td>Weighted completion rate</td>
+  <td>Total completed points ÷ total planned points</td>
+</tr>
+<tr>
+  <td>Blockers raised</td>
+  <td>Number of blockers recorded during a sprint</td>
+</tr>
+<tr>
+  <td>Carryover items</td>
+  <td>Items moved into a later sprint</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Results from the sample</h2>
+<ul>
+<li><strong>322</strong> story points were planned across eight sprints.</li>
+<li><strong>282</strong> story points were completed.</li>
+<li>The weighted sprint completion rate was <strong>87.6%</strong>.</li>
+<li>The sample averaged <strong>5.25 blockers per sprint</strong>.</li>
+<li>Sprint 5 had the lowest completion rate (<strong>81.0%</strong>) and the highest blocker count (<strong>8</strong>) and carryover count (<strong>8</strong>).</li>
+<li>Sprint 7 had the lowest blocker count (<strong>3</strong>) and a completion rate of <strong>90.9%</strong>.</li>
+</ul>
+<p><img src="../assets/charts/sprint_delivery.png" alt="Sprint planned vs completed" /></p>
+<p>These are calculated results from the synthetic dataset only. They do not represent delivery performance at The Cloudrix Technologies or any other employer.</p>
+<h2>5. Interpretation</h2>
+<p>The overall completion rate is a useful starting point, not a standalone measure of team performance. Sprint 5 is the clearest review candidate because lower completion coincides with more blockers and carryover. The data does not explain why this happened; the coordinator should validate causes with the team rather than assume a capacity or performance problem.</p>
+<p>A useful review would check whether Sprint 5 was affected by unclear acceptance criteria, unplanned work, late dependencies, environment issues, estimation uncertainty, or changes in priority.</p>
+<h2>6. Recommended project-coordination actions</h2>
+<table>
+<thead>
+<tr>
+  <th>Priority</th>
+  <th>Action</th>
+  <th>Owner to involve</th>
+  <th>Evidence to review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>High</td>
+  <td>Review Sprint 5 carryover and blockers item by item</td>
+  <td>Scrum Master, Developers, QA</td>
+  <td>Impediment log, ticket history</td>
+</tr>
+<tr>
+  <td>High</td>
+  <td>Make dependency owners and due dates visible before sprint start</td>
+  <td>Project Manager, technical leads</td>
+  <td>RAID log, dependency tracker</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Compare planned capacity with leave, support work, and unplanned requests</td>
+  <td>Scrum Master, team</td>
+  <td>Capacity plan, sprint backlog</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Check acceptance criteria and Definition of Done before work starts</td>
+  <td>Product Owner, QA, Developers</td>
+  <td>Product backlog, DoD</td>
+</tr>
+<tr>
+  <td>Medium</td>
+  <td>Track blocker age, not only blocker count</td>
+  <td>Project Coordinator</td>
+  <td>Impediment log with opened/resolved dates</td>
+</tr>
+</tbody>
+</table>
+<h2>7. Example delivery cadence</h2>
+<p><strong>Before sprint planning:</strong> confirm priority, capacity, dependencies, and acceptance criteria.<br />
+<strong>During the sprint:</strong> update the board, capture blockers, assign owners, and escalate ageing dependencies.<br />
+<strong>At sprint review:</strong> compare committed and completed work and record stakeholder feedback.<br />
+<strong>At retrospective:</strong> select one or two measurable improvement actions with owners and due dates.</p>
+<h2>8. Example PM artifacts</h2>
+<ul>
+<li><a href="../project-management/raid-log.csv">Sample RAID log</a></li>
+<li><a href="../project-management/project-status-report-template.md">Weekly project status report template</a></li>
+<li><a href="../project-management/sprint-retrospective-template.md">Sprint retrospective template</a></li>
+<li><a href="../sql/project_delivery_analysis.sql">SQL analysis</a></li>
+<li><a href="../analysis/run_analysis.py">Python analysis script</a></li>
+</ul>
+<h2>9. Limitations and next iteration</h2>
+<p>Eight sprint snapshots are not enough to diagnose root causes or assess long-term predictability. The sample also lacks sprint duration, team capacity, story-level detail, defect/rework data, unplanned work, and blocker resolution time.</p>
+<p>A production version should connect to Jira or the team's delivery tool, retain ticket-level history, and trend cycle time, throughput, ageing work, escaped defects, and dependency delays alongside sprint completion.</p>
+<h2>10. Relevant experience</h2>
+<p>My resume describes coordinating multiple IT projects, supporting sprint planning, daily stand-ups, sprint reviews and retrospectives, tracking tasks and milestones, following up on blockers and risks, and maintaining status reports, meeting notes, action trackers, and project documentation. This case study demonstrates how I would structure that coordination information into a delivery review.</p>
+
+    </article>
+    <p class="case-end"><a href="../index.html#work">← Explore other case studies</a></p>
+  </main>
+  <footer><span>© 2026 Enosh Tandi</span><span>Project Management · Business Analytics · Operations</span></footer>
+</body>
+</html>
